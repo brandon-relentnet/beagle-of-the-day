@@ -172,6 +172,10 @@ h1 {
   font-size: 14px;
 }
 
+.card__error[hidden] {
+  display: none;
+}
+
 .card__caption {
   padding: 12px 16px;
   border-top: 1px solid var(--line);
