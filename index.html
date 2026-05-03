@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Beagle of the Moment</title>
+    <title>Dog of the Moment</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%B6%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -11,21 +11,32 @@
     <main class="stage">
       <header class="stage__header">
         <p class="eyebrow">A small website</p>
-        <h1>Beagle of the Moment</h1>
-        <p class="lede">Press the button. Meet a beagle.</p>
+        <h1>Dog of the Moment</h1>
+        <p class="lede">Pick a breed. Press the button. Meet a dog.</p>
       </header>
+
+      <div class="picker">
+        <label for="breed" class="picker__label">Breed</label>
+        <select id="breed" class="picker__select" aria-label="Choose a breed">
+          <option value="beagle" data-label="Beagle">Beagle</option>
+          <option value="cavapoo" data-label="Cavapoo">Cavapoo</option>
+          <option value="retriever/golden" data-label="Golden Retriever">Golden Retriever</option>
+          <option value="labrador" data-label="Labrador">Labrador</option>
+          <option value="husky" data-label="Husky">Husky</option>
+        </select>
+      </div>
 
       <figure class="card" aria-busy="false">
         <div class="card__media">
           <img
-            id="beagle"
-            alt="A random beagle"
+            id="dog"
+            alt="A random dog"
             decoding="async"
             fetchpriority="high"
           />
           <div class="card__skeleton" aria-hidden="true"></div>
           <div class="card__error" role="alert" hidden>
-            <p>Couldn't fetch a beagle. Check your connection and try again.</p>
+            <p>Couldn't fetch a dog. Check your connection and try again.</p>
           </div>
         </div>
         <figcaption class="card__caption">
@@ -35,7 +46,7 @@
 
       <div class="actions">
         <button id="next" type="button" class="btn">
-          <span class="btn__label">Show me another beagle</span>
+          <span class="btn__label">Show me another</span>
           <svg
             class="btn__icon"
             viewBox="0 0 24 24"
